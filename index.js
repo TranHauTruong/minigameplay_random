@@ -27,7 +27,12 @@ function gameplay(options) {
     const { typeGames, playerOne } = options;
     const playerTwo = random(typeGames);
     const sumTypes = sum(playerOne, playerTwo);
-    return comparison(sumTypes);
+    const compare = comparison(sumTypes)
+    return {
+        playerOne,
+        playerTwo,
+        compare
+    };
 }
 
 
